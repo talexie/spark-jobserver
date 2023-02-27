@@ -7,7 +7,7 @@ FROM openjdk:11-jdk-bullseye AS build
 ARG SBT_VERSION=1.8.2
 ARG SCALA_VERSION=3.2.2
 ARG SPARK_VERSION=3.3.2
-ARG HADOOP_VERSION=3.3.4
+ARG HADOOP_VERSION=3
 
 # Install dependencies
 RUN apt update && apt install -y curl
@@ -42,7 +42,7 @@ ENV SPARK_JOBSERVER_MEMORY=1G \
     MANAGER_JAR_FILE=/opt/sparkjobserver/bin/spark-job-server.jar \
     MANAGER_CONF_FILE=/opt/sparkjobserver/config/jobserver.conf
 
-#RUN apk add --no-cache bash
+RUN apt update
 COPY --from=build /tmp/spark /opt/spark
 COPY --from=build /tmp/sparkjobserver/job-server-extras/target/scala-*/spark-job-server.jar /opt/sparkjobserver/bin/spark-job-server.jar
 
