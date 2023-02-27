@@ -9,7 +9,7 @@ object Versions {
   lazy val flyway = "4.2.0"
   lazy val hadoop = "2.7.7"
   lazy val h2 = "1.3.176"
-  lazy val java = sys.env.getOrElse("JAVA_VERSION", "8-jdk")
+  lazy val java = sys.env.getOrElse("JAVA_VERSION", "11-jdk")
   lazy val jjwt = "0.9.1"
   lazy val jwksRsa = "0.15.0"
   lazy val logback = "1.2.3"
@@ -24,7 +24,7 @@ object Versions {
   lazy val shiro = "1.7.1"
   lazy val slick = "3.3.3"
   lazy val typeSafeConfig = "1.4.1"
-  lazy val cassandraConnector = "2.5.1"
+  lazy val cassandraConnector = "3.3.0"
   lazy val curator = "4.2.0"
   lazy val curatorTest = "4.2.0"
   lazy val commonConfigurations = "1.10"
