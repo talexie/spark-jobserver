@@ -4,8 +4,8 @@
 FROM openjdk:11-jdk-bullseye AS build
 
 # Dependency/environment versions
-ARG SBT_VERSION=1.8.2
-ARG SCALA_VERSION=2.12.12
+ARG SBT_VERSION=1.5.2
+ARG SCALA_VERSION=2.11.8
 ARG SPARK_VERSION=3.3.2
 ARG HADOOP_VERSION=3
 
