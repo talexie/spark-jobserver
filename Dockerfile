@@ -45,6 +45,7 @@ ENV SPARK_JOBSERVER_MEMORY=1G \
 RUN apt update
 COPY --from=build /tmp/spark /opt/spark
 COPY --from=build /tmp/sparkjobserver/job-server-extras/target/scala-*/spark-job-server.jar /opt/sparkjobserver/bin/spark-job-server.jar
+COPY docker-setups/minimal/config/log4j.properties /opt/sparkjobserver/config/log4j.properties
 
 # 8090: API
 # 9999: JMX
